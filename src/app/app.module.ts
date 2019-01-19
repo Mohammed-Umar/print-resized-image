@@ -8,7 +8,6 @@ import { ResizeImageDirective } from './resize-image.directive';
 import { NgxPrintModule } from 'ngx-print';
 import { PreviewComponent } from './preview/preview.component';
 import { SelectionComponent } from './selection/selection.component';
-import { FileSelectDirective } from 'ng2-file-upload';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { FileSelectDirective } from 'ng2-file-upload';
     AppComponent,
     ResizeImageDirective,
     PreviewComponent,
-    SelectionComponent,
-    FileSelectDirective
+    SelectionComponent
   ],
   imports: [
     BrowserModule,
