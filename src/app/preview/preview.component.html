@@ -1,0 +1,19 @@
+<div id="print-section" class="row box-shadow" style="margin-top:25px">
+  <div class="col-md-1"></div>
+  <div class="col-md-6">
+    <img class="lib-img-show" src={{image}} [style.height.px]="imageHeight" [style.width.px]="imageWidth" alt="uploaded Image"> <!-- "http://lorempixel.com/850/850/?random=123" -->
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-4">
+    <div>
+      <p>{{ SKU }}</p>
+    </div>
+    <!-- <div>
+      Example library
+    </div>
+    <div>
+      Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+    </div> -->
+  </div>
+</div>
+<button printSectionId="print-section" ngxPrint>print</button>

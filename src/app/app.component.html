@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -18,4 +18,29 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+<!-- <div id="print-section" class="container">
+  <app-preview></app-preview>
+</div> -->
+<!-- <button printSectionId="print-section" ngxPrint>print</button> -->
+
+
+<div class=row *ngIf="!showPreview">
+  <div class="col-md-12 center"> 
+    <input type="file" (change)="detectFile($event)" class="file-input">    
+  </div>
+  <div class="col-md-3">
+    <input type="number" [(ngModel)]="imageHeight" placeholder="Image height in mm" required>
+  </div>
+  <div class="col-md-3">
+    <input type="number" [(ngModel)]="imageWidth" placeholder="Image height in mm" required>
+  </div>  
+  <div class="col-md-3">
+    <input type="text" [(ngModel)]="imageSKU" placeholder="SKU of the Image" required>
+  </div>
+  <div> 
+    <button (click)="printPreview()">Preview</button>
+  </div>
+</div>
+<app-preview *ngIf="showPreview" [image]="prinatableImage" [imageHeight]="imageHeight" [imageWidth]="imageWidth" [SKU]="imageSKU"></app-preview>

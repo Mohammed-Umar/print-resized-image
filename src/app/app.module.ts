@@ -1,16 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ResizeImageDirective } from './resize-image.directive';
+import { NgxPrintModule } from 'ngx-print';
+import { PreviewComponent } from './preview/preview.component';
+import { SelectionComponent } from './selection/selection.component';
+import { FileSelectDirective } from 'ng2-file-upload';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResizeImageDirective,
+    PreviewComponent,
+    SelectionComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPrintModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
